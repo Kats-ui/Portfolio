@@ -1,4 +1,4 @@
-<<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,12 +7,20 @@
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="navbar">
-      <li>
-        <href></href>
-        <href></href>
-        <href></href>
-      </li>
-    </div>
+    <nav class="navbar">
+      <a href="education.html" onclick="setActive(this)">Education</a>
+      <a href="address.html" onclick="setActive(this)">Address</a>
+      <a href="projects.html" onclick="setActive(this)">Projects</a>
+      <a href="contact.html" onclick="setActive(this)">Contacts</a>
+    </nav>
+
+    <script>
+      function setActive(el) {
+        document.querySelectorAll(".navbar a").forEach((link) => {
+          link.classList.remove("active");
+        });
+        el.classList.add("active");
+      }
+    </script>
   </body>
 </html>
