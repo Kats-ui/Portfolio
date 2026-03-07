@@ -6,6 +6,21 @@
     <title>Document</title>
 </head>
 <body>
+    <nav class="navbar">
+      <a href="index.html" onclick="setActive(this)">Projects</a>
+      <a href="education.html" onclick="setActive(this)">Education</a>
+      <a href="projects.html" onclick="setActive(this)">Contacts</a>
+      <a href="contact.html" onclick="setActive(this)">Address</a> 
+
+
+    <script>
+      function setActive(el) {
+        document.querySelectorAll(".navbar a").forEach((link) => {
+          link.classList.remove("active");
+        });
+        el.classList.add("active");
+      }
+    </script>
     
 </body>
 </html>
